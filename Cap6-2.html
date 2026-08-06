@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Reserva de Mesa - Sabor do Litoral</title>
+</head>
+<body>
+
+  <header>
+    <h1>Restaurante Sabor do Litoral</h1>
+    <h2>Reserva de Mesa Online</h2>
+  </header>
+
+  <main>
+    <form action="#" method="post">
+
+      <!-- CONTATO -->
+      <fieldset>
+        <legend>Contato</legend>
+
+        <label for="nome">Nome completo *</label>
+        <input type="text" id="nome" name="nome" placeholder="Nome para a reserva" required>
+
+        <label for="telefone">Telefone *</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(82) 90000-0000" required>
+
+        <label for="email">E-mail para confirmação *</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+      </fieldset>
+
+      <!-- DETALHES DA RESERVA -->
+      <fieldset>
+        <legend>Detalhes da Reserva</legend>
+
+        <label for="data">Data da reserva *</label>
+        <input type="date" id="data" name="data" min="2026-05-19" required>
+
+        <label for="horario">Horário *</label>
+        <input type="time" id="horario" name="horario" required>
+
+        <label for="pessoas">Nº de pessoas *</label>
+        <input type="number" id="pessoas" name="pessoas" min="1" max="20" step="1" value="2" required>
+
+        <p>Área preferida</p>
+        <label><input type="radio" name="area" value="salao"> Salão interno</label>
+        <label><input type="radio" name="area" value="varanda"> Varanda</label>
+        <label><input type="radio" name="area" value="externa"> Área externa (vista mar)</label>
+
+        <label for="ocasiao">Tipo de ocasião</label>
+        <select id="ocasiao" name="ocasiao">
+          <option value="">Selecione (opcional)...</option>
+          <option value="aniversario">Aniversário</option>
+          <option value="casamento">Pedido de casamento</option>
+          <option value="negocios">Reunião de negócios</option>
+          <option value="familia">Encontro familiar</option>
+          <option value="outro">Outro</option>
+        </select>
+
+        <p>Restrições alimentares</p>
+        <label><input type="checkbox" name="restricao" value="vegetariano"> Vegetariano</label>
+        <label><input type="checkbox" name="restricao" value="vegano"> Vegano</label>
+        <label><input type="checkbox" name="restricao" value="sem-gluten"> Sem glúten</label>
+        <label><input type="checkbox" name="restricao" value="sem-lactose"> Sem lactose</label>
+
+        <label for="observacoes">Observações</label>
+        <textarea id="observacoes" name="observacoes" rows="3"
+                  placeholder="Cadeira de bebê, alergias específicas, comemorações..."></textarea>
+      </fieldset>
+
+      <label>
+        <input type="checkbox" name="politica" value="aceito" required>
+        Concordo com a política de cancelamento (até 2h antes do horário reservado).
+      </label>
+
+      <button type="submit">Confirmar Reserva</button>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Restaurante Sabor do Litoral</p>
+  </footer>
+
+</body>
+</html>
